@@ -530,6 +530,8 @@ window.onload = function () {
             // playlists:users[0].playlists
         }
         console.log(res)
+                                spinner.classList.replace('d-flex', 'd-none')
+
     }
     )
         .then(res => {
@@ -537,7 +539,6 @@ window.onload = function () {
                 currentUser.playlists = res.items
                 localStorage.setItem('playLists', JSON.stringify(currentUser.playlists))
                 renderPlaylist()
-                        spinner.classList.replace('d-flex', 'd-none')
 
 
         }
