@@ -524,7 +524,7 @@ window.onload = function () {
         currentUser = {
             name: res.display_name,
             username: res.email,
-            avatar: res.images[0].url,
+            avatar: res.images[0]?.url,
             id: res.id,
             product: res.product,
             // playlists:users[0].playlists
