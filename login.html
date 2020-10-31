@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <title>Spotify Clone - Login</title>
+</head>
+
+<body>
+    <header class="login__header">
+
+        <img src="./imgs/Spotify_Logo_RGB_Black.png" alt="spotify__logo" class="login__logo">
+    </header>
+    <main class="login__box">
+        <div class="login__socials d-flex flex-column my-4 text-center">
+            <h6>To continue, log in to Spotify</h6>
+            <a href="#" class="btn-login btn-fb my-2"><span onclick="authentication()"><i
+                        class="fab fa-facebook mr-1"></i> Continue with facebook</a></span>
+            <a href="#" class="btn-login btn-black my-2"><span onclick="authentication()"><i
+                        class="fab fa-apple mr-1"></i>Continue with apple</a></span>
+            <a href="#" class="btn-login btn-default mt-2 mb-3"><span onclick="authentication()"><i
+                        class="fab fa-google mr-1"></i>Continue with
+                    Google</a></span>
+
+        </div>
+        <div class="d-flex flex-column login__inputs mb-3">
+
+            <span class='d-flex flex-column' onclick="authentication()"> <a href="#" class="btn-login btn-green"
+                    id="loginBtn">LOG IN WITH SPOTIFY</a></span>
+        </div>
+        </div>
+        <div class="login__signup text-center d-flex flex-column mt-3">
+            <h6>Don't have an account?</h6>
+            <button class="btn-login btn-default mt-3" onclick="signup()">SIGN UP FOR SPOTIFY</button>
+
+        </div>
+
+
+    </main>
+
+
+
+
+    <script src="./js/index.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/84a612360c.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+<script>
+    const signup = () => {
+        window.open('https://www.spotify.com/us/signup/', 'Sing-Up', 'width=800,height=600')
+
+    }
+</script>
