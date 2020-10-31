@@ -160,14 +160,12 @@ const createPlaylist = (user) => {
 }
 const renderPlaylist = () => {
     playLists = JSON.parse(localStorage.getItem('playLists'))
-    if (playList.length < 0) {
-        playLists =[]
-    }
+    
     playLists.forEach((playlist, i) => {
-    let a = document.createElement('a');
-    a.href = `playlist.html?${playlist}`
-    a.innerHTML = `<span class="sideNav__nav-play-thumb text-white"><i class="fas fa-music"></i></span><span> ${playlist.name}</span>`
-    playlistContainer.appendChild(a)
+        let a = document.createElement('a');
+        a.href = `playlist.html?${playlist}`
+        a.innerHTML = `<span class="sideNav__nav-play-thumb text-white"><i class="fas fa-music"></i></span><span> ${playlist.name}</span>`
+        playlistContainer.appendChild(a)
     })
    
 }
