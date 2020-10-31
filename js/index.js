@@ -204,7 +204,7 @@ updatePlaylist(user)
 const authentication = () => {
     const client_id = 'e54184c2056e4fceba268bad7ae4175f';
     const secret = '90bf6fe6367b4d92b75aa2bca47478f0'
-    const redirect_uri = 'http%3A%2F%2F127.0.0.1%3A5500%2F'
+    const redirect_uri = 'https%3A%2F%2Fspotify-clone-api-js.vercel.app'
     const scopes = 'user-read-private user-read-email user-top-read'
 
 
