@@ -160,6 +160,9 @@ const createPlaylist = (user) => {
 }
 const renderPlaylist = () => {
     playLists = JSON.parse(localStorage.getItem('playLists'))
+    if (playList.length < 0) {
+        playLists =[]
+    }
     playLists.forEach((playlist, i) => {
     let a = document.createElement('a');
     a.href = `playlist.html?${playlist}`
@@ -517,7 +520,7 @@ window.onload = function () {
 
     //GET USER INFORMATION
 
-    fetchUser().then(res =>
+    fetchUser().then(res => {
         currentUser = {
             name: res.display_name,
             username: res.email,
@@ -526,7 +529,8 @@ window.onload = function () {
             product: res.product,
             // playlists:users[0].playlists
         }
-        
+        console.log(res)
+    }
     )
         .then(res => {
             fetchPlaylists().then(res => {
