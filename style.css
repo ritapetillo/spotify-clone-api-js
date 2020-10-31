@@ -217,7 +217,7 @@ a.btn-login.bt-fb {
   cursor: pointer;
 }
 .sideNav__playlist {
-  height: 500px;
+  height: 400px;
   overflow-y: scroll;
 }
 .sideNav__playlist a {
