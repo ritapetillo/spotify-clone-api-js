@@ -608,6 +608,13 @@ window.onload = function () {
         })
     }
 
+    if (window.location.href.indexOf("index")!= -1)  {
+     spinner.classList.replace('d-flex', 'd-none')
+
+     }
+
+
+
            /////////---------RENDER FAV ARTISTS ALBUMS-----------//////////////
 
    
