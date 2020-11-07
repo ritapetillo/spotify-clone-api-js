@@ -10,14 +10,22 @@
 </head>
 
 <body>
+    <div class="spinner d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-success" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    </div>
+    </div>
     <div class="wrapper d-flex flex-column-reverse flex-md-row">
+
         <div class="sideNav d-flex flex-row flex-md-column">
             <div class="sideNav__nav sideNav__top d-flex flex-row flex-md-column">
                 <!-- logo -->
-        
+
                 <a href="#" class="sideNav__logo d-none d-md-block"><img src="./imgs/Spotify_Logo_RGB_White.png"
                         alt="spotify_logo"></a>
-        
+
                 <!-- sidebar links -->
                 <div class=" sideNav__nav-links d-flex flex-row flex-md-column text-left">
                     <a href="index.html"> <svg class="mr-2" viewBox="0 0 512 512" width="24" height="24"
@@ -44,20 +52,21 @@
                                 d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
                                 fill="currentColor"></path>
                         </svg><span>Browse</span></a>
-        
+
                 </div>
                 <!-- sidebar playlist -->
-        
-                <div class=" sideNav__nav-links sideNav__playlist d-none d-md-flex flex-row flex-md-column text-left mt-5">
+
+                <div
+                    class=" sideNav__nav-links sideNav__playlist d-none d-md-flex flex-row flex-md-column text-left mt-5">
                     <h6 class="ml-3">PLAYLIST</h6>
                     <a class="sideNav__nav-addPlay" data-toggle="modal" data-target="#createPlaylistModal"><i
                             class="fas fa-plus "></i><span>Create Playlist</span></a>
                     <a href="#"><span class="sideNav__nav-play-thumb"><i class="fas fa-music"></i></span><span> My
                             Playlist</span></a>
-        
+
                 </div>
             </div>
-        
+
             <!-- sidebar install app -->
             <div class="sideNav__footer sideNav__nav-links text-left d-none d-md-block">
                 <a href="#"> <svg role="img" height="24" width="24" viewBox="0 0 24 24" class="mr-2">
@@ -79,29 +88,32 @@
 
 
 
-        <main class="container-fluid">
+        <main class="container-fluid categories__page">
             <div class="navArrows"><a href="#"><i class="fas fa-chevron-left" onclick="previous()"></i></a><a
                     href="#"><i class="fas fa-chevron-right" onclick="forward()"></i></a></div>
-            <section class="playlist">
+
+            <section>
                 <div class="row">
 
                     <div class="col-12">
-                        <div class="playlist__jumbotron jumbotron jumbotron-fluid">
+                        <div class="jumbotron jumbotron-fluid jumbotron-art-fav">
                             <div class="jumbo__overlay"></div>
 
                             <div class="container">
                                 <div class="row">
 
                                     <div class="col-12 text-center jumbo-content">
-                                        <h2 class='text-white'>Favorte Artists</h2>
-                                        <h1 class="display-4 playlistTitle"></h1>
+                                        <!-- <h6>33,000,575 monthly listeners</h6> -->
+                                        <h1 class="display-4 artist-title">Categories</h1>
+
                                         <div class="d-flex flex-column buttons-links-wrapper">
+
                                             <div
                                                 class="d-flex justify-content-center buttons-wrapper align-items-center">
-                                                <button type="button" class="btn-login btn-green ">Play</button>
-                                                <button type="button"
-                                                    class="btn-login btn-dark-trasparent">Follow</button>
-                                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+
+                                                <!-- <button type="button" class="btn-login btn-green ">Play</button>
+                                               
+                                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i> -->
                                             </div>
                                         </div>
 
@@ -117,17 +129,21 @@
 
                 </div>
 
-                <div class="navBar col-12 d-flex justify-content-center jumbo-links">
-                    <a href="#" class="navBar__link active">Overview</a>
-                    <a href="#" class="navBar__link">Related Artists</a>
-                    <a href="#" class="navBar__link">About</a>
-                </div>
+
             </section>
+            <div class="index__navBar navBar col-12 d-none d-md-flex justify-content-center" id="indexNavbar">
+                <a href="/categories.html" class="navBar__link active">Categories</a>
+                <a href="/featured-playlist.html" class="navBar__link">Featured releases</a>
+                <a href="http://127.0.0.1:5500/featured-releases.html" class="navBar__link">New releases</a>
+                <a href="/top-lists.html" class="navBar__link">Top Lists</a>
 
+
+            </div>
             <section class="container-fluid my-auto ">
-                <h3 class="text-left my-3" style="font-weight: bold">Favorite Artists</h3>
+                <h3 class="text-left my-3" style="font-weight: bold">Browse Categories</h3>
 
-                <div class="row artists__container">
+                <div class="row categories">
+
                 </div>
 
             </section>
@@ -158,7 +174,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Search Modal -->
             <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel"
                 aria-hidden="true">
@@ -185,15 +200,15 @@
                     </div>
                 </div>
             </div>
-
         </main>
 
     </div>
+
+
     <section class="player">
         <iframe src="https://open.spotify.com/embed/track/0VjIjW4GlUZAMYd2vXMi3b" id="music-player" frameborder="0"
             allowtransparency="true" allow="encrypted-media" autoplay="1"></iframe>
     </section>
-
 
     <script src="./js/index.js"></script>
     <!-- jQuery library -->

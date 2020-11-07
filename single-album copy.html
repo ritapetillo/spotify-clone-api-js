@@ -11,16 +11,17 @@
 
 <body>
     <div class="wrapper d-flex flex-column-reverse flex-md-row">
-        <div class="navArrows"><a href="#"><i class="fas fa-chevron-left" onclick="previous()"></i></a><a href="#"><i
-                    class="fas fa-chevron-right" onclick="forward()"></i></a></div>
+    <div class="navArrows"><a href="#"><i class="fas fa-chevron-left" onclick="previous()"></i></a><a href="#"><i
+                class="fas fa-chevron-right" onclick="forward()"></i></a></div>
 
         <div class="sideNav d-flex flex-row flex-md-column">
+
             <div class="sideNav__nav sideNav__top d-flex flex-row flex-md-column">
                 <!-- logo -->
-        
+
                 <a href="#" class="sideNav__logo d-none d-md-block"><img src="./imgs/Spotify_Logo_RGB_White.png"
                         alt="spotify_logo"></a>
-        
+
                 <!-- sidebar links -->
                 <div class=" sideNav__nav-links d-flex flex-row flex-md-column text-left">
                     <a href="index.html"> <svg class="mr-2" viewBox="0 0 512 512" width="24" height="24"
@@ -41,26 +42,21 @@
                                 d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
                                 fill="currentColor"></path>
                         </svg><span> Your Artists</span></a>
-                    <a href="categories.html"><svg class="mr-2" viewBox="0 0 512 512" width="24" height="24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path class="mr-2"
-                                d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
-                                fill="currentColor"></path>
-                        </svg><span>Browse</span></a>
-        
+
                 </div>
                 <!-- sidebar playlist -->
-        
-                <div class=" sideNav__nav-links sideNav__playlist  d-none d-md-flex flex-row flex-md-column text-left mt-5">
+
+                <div
+                    class=" sideNav__nav-links sideNav__playlist d-none d-md-flex flex-row flex-md-column text-left mt-5">
                     <h6 class="ml-3">PLAYLIST</h6>
                     <a class="sideNav__nav-addPlay" data-toggle="modal" data-target="#createPlaylistModal"><i
                             class="fas fa-plus "></i><span>Create Playlist</span></a>
                     <a href="#"><span class="sideNav__nav-play-thumb"><i class="fas fa-music"></i></span><span> My
                             Playlist</span></a>
-        
+
                 </div>
             </div>
-        
+
             <!-- sidebar install app -->
             <div class="sideNav__footer sideNav__nav-links text-left d-none d-md-block">
                 <a href="#"> <svg role="img" height="24" width="24" viewBox="0 0 24 24" class="mr-2">
@@ -75,7 +71,7 @@
                         <span id="usernameSpan"></span>
                     </div><span id="logout"><i class="fas fa-sign-out-alt"></i></span>
                 </a>
-        
+
             </div>
         </div>
 
@@ -88,18 +84,18 @@
                 <div class="row">
                     <div class="col-12 col-lg-4 px-4">
                         <div class="card">
-                            <img class="card-img-top" id="album-img"
-                                src=""
+                            <img class="card-img-top"
+                                src="https://images-na.ssl-images-amazon.com/images/I/71B34LLm%2B9L._SY355_.jpg"
                                 alt="Card image cap">
                             <div class="card-body d-flex flex-column align-items-center">
-                                <h5 class="card-title" id="album-title"></h5>
+                                <h5 class=" card-title">Queen II (Deluxe Edition Remaster)</h5>
 
-                                <h6 id='album-singer'></h6>
+                                <h6>Queen</h6>
 
                                 <div class="d-flex flex-column buttons-wrapper align-items-center">
                                     <button type="button" class="btn-login btn-green d-inline"
                                         style="margin-right: 0;">Play</button>
-                                    <h6><span id="album-year"></span> - <span id="album-ntracks"></span></h6>
+                                    <h6>1974 - 16 songs</h6>
                                     <div class="icons-wrapper">
                                         <i class="fa fa-heart" aria-hidden="true"></i>
                                         <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
@@ -108,11 +104,78 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-8 table-div">
+                    <div class="col-12 col-lg-8">
                         <table class="table table-borderless table-dark table-album">
-                            <tbody id="song-list">
-
-                            </tbody>    
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i><i
+                                            class="far fa-play-circle"></i></th>
+                                    <td colspan="2">Procession - Remastered 2011</td>
+                                    <td>1:13</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">Father To Son - Remastered 2011</td>
+                                    <td>6:13</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">White Queen(As It Began) - Remastered 2011</td>
+                                    <td>4:33</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">Some Day One Day - Remastered 2011</td>
+                                    <td>4:22</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">The Loser In The End Remastered 2011</td>
+                                    <td>4:01</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">Ogre Battle - Remastered 2011</td>
+                                    <td>4:08</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">The Fairy Feller's Master Stroke - Remastered 2011</td>
+                                    <td>2:40</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">Nevermore - Remastered 2011</td>
+                                    <td>1:18</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">The March Of The Black Queen - Remastered 2011</td>
+                                    <td>6:32</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">Funny How Love Is - Remastered 2011</td>
+                                    <td>2:49</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">Seven Seas Of Rhye - Remastered 2011</td>
+                                    <td>2:48</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">See What A Fool I've Been</td>
+                                    <td>4:22</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fa fa-music" aria-hidden="true"></i></th>
+                                    <td colspan="2">White Queen(As It Began) - Live At Hammersmith Odean, London,
+                                        December
+                                        1975</td>
+                                    <td>5:32</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

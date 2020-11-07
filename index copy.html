@@ -10,11 +10,6 @@
 </head>
 
 <body>
-    <div class="spinner d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-success" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
     <div class="wrapper d-flex flex-column-reverse flex-md-row">
         <div class="sideNav d-flex flex-row flex-md-column">
             <div class="sideNav__nav sideNav__top d-flex flex-row flex-md-column">
@@ -31,24 +26,18 @@
                                 d="M 256.274 60.84 L 84.324 166.237 L 84.324 443.063 L 193.27 443.063 L 193.27 293.73 L 320.228 293.73 L 320.228 443.063 L 428.222 443.063 L 428.222 165.476 L 256.274 60.84 Z M 256.274 35.95 L 448.452 149.145 L 448.452 464.395 L 300 464.395 L 300 315.062 L 213.499 315.062 L 213.499 464.395 L 64.095 464.395 L 64.095 150.161 L 256.274 35.95 Z"
                                 fill="currentColor"></path>
                         </svg> <span>Home</span></a>
-                    <a href="#searchModal" data-toggle="modal" data-target="#searchModal"><svg class="mr-2"
-                            viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <a href="#"><svg class="mr-2" viewBox="0 0 512 512" width="24" height="24"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
                                 fill="currentColor" fill-rule="evenodd"></path>
                         </svg><span>Search</span></a>
-                    <a href="artists.html"><svg class="mr-2" viewBox="0 0 512 512" width="24" height="24"
+                    <a href="#"><svg class="mr-2" viewBox="0 0 512 512" width="24" height="24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path class="mr-2"
                                 d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
                                 fill="currentColor"></path>
-                        </svg><span> Your Artists</span></a>
-                        <a href="categories.html"><svg class="mr-2" viewBox="0 0 512 512" width="24" height="24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path class="mr-2"
-                                    d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
-                                    fill="currentColor"></path>
-                            </svg><span>Browse</span></a>
+                        </svg><span> Your Library</span></a>
 
                 </div>
                 <!-- sidebar playlist -->
@@ -87,8 +76,8 @@
 
 
         <main class="container-fluid container-index position-relative">
-            <div class="navArrows"><a href="#"><i class="fas fa-chevron-left" onclick="previous()"></i></a><a
-                    href="#"><i class="fas fa-chevron-right" onclick="forward()"></i></a></div>
+            <div class="navArrows"><a href="#" disabled><i class="fas fa-chevron-left"></i></a><a href="albums.html"><i
+                        class="fas fa-chevron-right"></i></a></div>
 
             <div class="d-none bedge" id="bedge">Album added to your favorite</div>
             <!-- here you put the content of each page -->
@@ -103,16 +92,140 @@
 
 
             </div>
-            <section class="index__cards container-fluid no-background">
-                <h3 class="text-left my-3" style="font-weight: bold">Recently Played</h3>
+            <section class="index__cards container">
+                <h3 class="text-left my-3" style="font-weight: bold">#THROWBACKTHURSDAY</h3>
 
-                <div class="row "id="top-artists">
-                
-                
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 text-center d-flex" style="margin-bottom: 2rem">
+                        <div class="card card-spotify">
+                            <div class="img-albums">
+                                <div class="imgAlbum">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/71V74NRrgPL._AC_SL1200_.jpg"
+                                        class="card-img-top d-flex" alt="..." />
+                                    <div class="play_container">
+                                        <i class="far fa-play-circle playFav" onclick="playsong()"></i>
+                                    </div>
+                                    <div class="hearth_container">
+                                        <i class="far fa-heart hearthFav"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Bohemian Rhapsody (The Original Soundtrack)
+                                </h5>
+                                <h6 class="card-title">Queen</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2  text-center" style="margin-bottom: 2rem">
+                        <div class="card card-spotify">
+                            <div class="img-albums">
+                                <div class="imgAlbum">
+                                    <img src="https://m.media-amazon.com/images/I/71P0x5gbkSL._SS500_.jpg"
+                                        class="card-img-top d-flex" alt="..." />
+                                    <div class="play_container">
+                                        <i class="far fa-play-circle playFav"></i>
+                                    </div>
+                                    <div class="hearth_container">
+                                        <i class="far fa-heart hearthFav"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Bohemian Rhapsody (The Original Soundtrack)
+                                </h5>
+                                <h6 class="card-title">Queen</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2  text-center" style="margin-bottom: 2rem">
+                        <div class="card card-spotify">
+                            <div class="img-albums">
+                                <div class="imgAlbum">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/51UtWpxbNYL._AC_SL1500_.jpghttps://images-na.ssl-images-amazon.com/images/I/91sLchfSmpL._AC_SL1500_.jpg"
+                                        class="card-img-top" alt="..." />
+                                    <div class="play_container">
+                                        <i class="far fa-play-circle playFav"></i>
+                                    </div>
+                                    <div class="hearth_container">
+                                        <i class="far fa-heart hearthFav"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Bohemian Rhapsody (The Original Soundtrack)
+                                </h5>
+                                <h6 class="card-title">Queen</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2  text-center " style="margin-bottom: 2rem">
+                        <div class="card card-spotify">
+                            <div class="img-albums">
+                                <div class="imgAlbum">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/81IdGCZz2KL._AC_SL1500_.jpg"
+                                        class="card-img-top" alt="..." />
+                                    <div class="play_container">
+                                        <i class="far fa-play-circle playFav"></i>
+                                    </div>
+                                    <div class="hearth_container">
+                                        <i class="far fa-heart hearthFav"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Queen <br />Greatest Hits</h5>
+                                <h6 class="card-title">Two lp Set</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2  text-center" style="margin-bottom: 2rem">
+                        <div class="card card-spotify">
+                            <div class="img-albums">
+                                <div class="imgAlbum">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/91A1%2BqyzqBL._AC_SL1500_.jpg"
+                                        class="card-img-top" alt="..." />
+                                    <div class="play_container">
+                                        <i class="far fa-play-circle playFav"></i>
+                                    </div>
+                                    <div class="hearth_container">
+                                        <i class="far fa-heart hearthFav"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Live Around The World <br />Deluxe</h5>
+                                <h6 class="card-title">2020</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2  text-center" style="margin-bottom: 2rem">
+                        <div class="card card-spotify">
+                            <div class="img-albums">
+                                <div class="imgAlbum">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/71B34LLm%2B9L._AC_SL1400_.jpg"
+                                        class="card-img-top" alt="..." />
+                                    <div class="play_container">
+                                        <i class="far fa-play-circle playFav"></i>
+                                    </div>
+                                    <div class="hearth_container">
+                                        <i class="far fa-heart hearthFav"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Queen II <br />(2011 Remaster)</h5>
+                                <h6 class="card-title">1974</h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <h3 class="text-left my-3" style="font-weight: bold">Classifiche</h3>
 
-                <div class="row" >
+                <div class="row">
                     <div class="col-6 col-md-4 col-lg-3 col-xl-2  text-center " style="margin-bottom: 2rem">
                         <div class="card card-spotify">
                             <div class="img-albums">
@@ -160,9 +273,9 @@
                             <div class="img-albums">
                                 <div class="imgAlbum">
                                     <img src="https://m.media-amazon.com/images/I/61zWioxHfwL._SS500_.jpg"
-                                        class="card-img-top" alt="..." />
+                                        class="card-img-top d-flex" alt="..." />
                                     <div class="play_container">
-                                        <i class="far fa-play-circle playFav" code="3BHe7LbW5yRjyqXNJ3A6mW"></i>
+                                        <i class="far fa-play-circle playFav"></i>
                                     </div>
                                     <div class="hearth_container">
                                         <i class="far fa-heart hearthFav"></i>
@@ -197,7 +310,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-4 col-lg-3 col-xl-2  text-center" style="margin-bottom: 2rem">
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2  text-center d-flex" style="margin-bottom: 2rem">
                         <div class="card card-spotify">
                             <div class="img-albums">
                                 <div class="imgAlbum">
@@ -266,38 +379,47 @@
                     </div>
                 </div>
             </div>
-            <!-- Search Modal -->
-            <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header text-center">
-                            <h5 class="modal-title" id="searchModalLabel">Search</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true"><i class="far fa-times-circle text-white"></i></span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="input-group mb-3">
-                                <input id="searchValue" type="text" class="form-control" placeholder="Search Artist"
-                                    value="" aria-label="Playlist Name" aria-describedby="playslist-name">
-
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-
-                            <button type="button" id="searchBtn" class="btn-login btn-green btn-modals"
-                                data-dismiss="modal">search</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </main>
 
     </div>
     <section class="player">
-        <iframe src="https://open.spotify.com/embed/track/0VjIjW4GlUZAMYd2vXMi3b" id="music-player" frameborder="0"
-            allowtransparency="true" allow="encrypted-media" autoplay="1"></iframe>
+        
+            <script src="https://sdk.scdn.co/spotify-player.js"></script>
+            <script>
+                // const playsong = () =>{
+                //     let 
+                    
+                // }
+                window.onSpotifyWebPlaybackSDKReady = () => {
+                    const token = 'BQBthtrP4i8aexW2MmGZ8ruBtIg1eZ2Y1vnTPolJGJLwN6NFS-bHecGxTmLhFWsT_7KdzrUVIRIOEeHUdE1FkVAdFF5ZjL5oORFxelC7ioXiqs6e8RbsGmAL06AsnI6JZrjNBeWt7mMrQZEb74J0bVePX4WZDhsUbdwHZg';
+                    const player = new Spotify.Player({
+                        name: 'Web Playback SDK Quick Start Player',
+                        getOAuthToken: cb => { cb(token); }
+                    });
+
+                    // Error handling
+                    player.addListener('initialization_error', ({ message }) => { console.error(message); });
+                    player.addListener('authentication_error', ({ message }) => { console.error(message); });
+                    player.addListener('account_error', ({ message }) => { console.error(message); });
+                    player.addListener('playback_error', ({ message }) => { console.error(message); });
+
+                    // Playback status updates
+                    player.addListener('player_state_changed', state => { console.log(state); });
+
+                    // Ready
+                    player.addListener('ready', ({ device_id }) => {
+                        console.log('Ready with Device ID', device_id);
+                    });
+
+                    // Not Ready
+                    player.addListener('not_ready', ({ device_id }) => {
+                        console.log('Device ID has gone offline', device_id);
+                    });
+
+                    // Connect to the player!
+                    player.connect();
+                };
+            </script>
     </section>
 
     <script src="./js/index.js"></script>

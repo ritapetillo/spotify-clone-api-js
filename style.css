@@ -87,6 +87,10 @@ a {
   background-color: transparent;
 }
 
+.table-div{
+  height: 600px;
+  overflow-y: scroll;
+}
 @keyframes bedge {
   0% {
     transform: translateX(0px);
@@ -191,6 +195,7 @@ a.btn-login.bt-fb {
   background-color: var(--color-navbar);
   padding: 1.5em;
   position: relative;
+  overflow-wrap: break-word;
 }
 .sideNav__top {
   position: fixed;
@@ -219,9 +224,12 @@ a.btn-login.bt-fb {
 .sideNav__playlist {
   height: 400px;
   overflow-y: scroll;
+  overflow-wrap: break-word;
+  max-width: 220px;
 }
 .sideNav__playlist a {
-  margin-bottom: 30px;
+  padding:10px 10px;
+  min-height: 45px;
 }
 .sideNav__playlist h6 {
   color: var(--color-links-sideNav);
@@ -270,11 +278,14 @@ a.btn-login.bt-fb {
 
 .sideNav__footer {
   position: fixed;
-  bottom: 100px;
-  width: 18%;
-  max-width: 190px;
-  min-width: 180px;
-  z-index: 999;
+  bottom: 90px;
+  left:0;
+  width: 24%;
+  max-width: 250px;
+  min-width: 240px;
+  z-index: 99;
+  background-color: var(--color-navbar);
+  padding:20px;
 }
 .sideNav__user-avatar {
   height: 25px;
@@ -704,6 +715,21 @@ h3 {
     #1d2671,
     #c33764
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* -----------------------------------------------CATEGORIES ---------------------------------------------*/
+
+.categories__page .jumbo__overlay{
+background: linear-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,.5)));
+background: linear-gradient(transparent,rgba(0,0,0,.5));
+background-color: rgb(13, 111, 228);
+}
+
+/* -----------------------------------------------SINGLE CATEGORY PAGE ---------------------------------------------*/
+
+.category .jumbo__overlay{
+background: linear-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,.5)));
+background: linear-gradient(transparent,rgba(0,0,0,.5));
+background-color: rgb(13, 111, 228);
 }
 
 /* ----------------------------------------MEDIA QUERIES ----------------------------------------------------*/
